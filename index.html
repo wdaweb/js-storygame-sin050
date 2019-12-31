@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function playgame() {
+        let name;
+        if ((name = prompt("娶新娘|嫁老公GO!闖關遊戲，請輸入你的大名！"))) {
+          alert(name + "是你嗎？來嘍～闖關GO!");
+        } else {
+          name = "Hi~";
+          alert("不想輸入？不行！就是要娶新娘|嫁老公GO!GO!");
+        }
+        if (confirm(name + "，Are You Ready?")) {
+          alert("有錢沒錢，娶個老婆嫁個老公好過年嘍！");
+
+          if (
+            qq(
+              "[題目1]愛妻宣言:你愛我嗎？",
+              "當然愛你呀！你是我的一切～",
+              "你竟敢不愛我，我要哭哭了啦～",
+              true
+            )
+          )
+            return;
+          if (
+            qq(
+              "[題目2]陷入兩難:我掉入水裡，你會奮不顧身的救我嗎？",
+              "你知道，奮不顧身不能解決問題～而是要臨危不亂",
+              "我想保險金比較實在！再見了baby~",
+
+              false
+            )
+          )
+            return;
+          if (
+            qq(
+              "[題目3]有錢真好:你的錢就是我的錢，我的錢還是我的錢嗎？",
+              "親愛的，這是當然的呀！",
+              "什麼？!不給我錢，那就不要碰我，再見！",
+              true
+            )
+          )
+            return;
+          if (
+            qq(
+              "[題目4]:外貌協會：我是世界上最有顏值的人嗎？",
+              "何止是世界上，根本是全宇宙了～你在我心中無可取代呀～",
+              "我愛的是你的心你的人，美貌算什麼！哼！",
+
+              false
+            )
+          )
+            return;
+          if (
+            qq(
+              "[題目5]環遊世界:會帶我去玩嗎？",
+              "你說！不管是天涯海角，今天就出發～",
+              "不過是小小心願，你也做不到！你可以再誇張一點！",
+              true
+            )
+          )
+            return;
+          alert(`恭喜${name}，送你一個愛人~讓你通往愛的幸福喔！`);
+        } else {
+          alert("等你知道嫁娶是人生最美好的天堂再來吧！");
+        }
+      }
+      function qq(msg, good, bad, be) {
+        if (confirm(msg) == be) alert(good);
+        else {
+          alert(bad + "\n" + "遊戲結束＠＠，再來挑戰呀！");
+          return true;
+        }
+      }
+      playgame();
+    </script>
+  </body>
+</html>
